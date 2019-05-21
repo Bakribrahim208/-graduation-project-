@@ -1,0 +1,52 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.backgroun_beko{
+	-fx-background-color:rgb(255,255,255) ;
+}
+
+
+.cicle_btn{
+      -fx-background-radius: 5em;  
+                -fx-min-width: 70px;  
+                -fx-min-height: 70px; 
+                -fx-max-width: 150px; 
+                -fx-max-height: 150px;
+}
+ 
+ #pane{
+    -fx-background-image: url("background_image.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 900 506;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+}
+.transparent{
+	-fx-background-color: rgba(0, 140, 10, 0.5);
+	 -fx-background-radius: 10;
+}
+.button_beko{
+		-fx-background-color:#f3530a;
+	    -fx-text-fill:#fbfbfb;
+	     -fx-background-radius: 5em;  
+                -fx-min-width: 70px;  
+                -fx-min-height: 70px; 
+                -fx-max-width: 150px; 
+                -fx-max-height: 150px;
+	
+}
+
+.button1{
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #f3530a;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-padding: 5;
+ }
+
+ 
+
+
+
+
+
+

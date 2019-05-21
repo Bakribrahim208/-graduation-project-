@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" tabClosingPolicy="ALL_TABS" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab closable="false" text="Untitled Tab 1">
+         <content>
+            <StackPane fx:id="stack_pane">
+               <children>
+                  <VBox fx:id="log_pane">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="img_user" fitHeight="106.0" fitWidth="303.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="file:/C:/Users/Elfarouk%20Omar/Desktop/bakr/server_FX3/src/resources/Dominic.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="img_background" fitHeight="98.0" fitWidth="684.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="file:/C:/Users/Elfarouk%20Omar/Desktop/bakr/server_FX3/src/resources/background.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <Pane prefWidth="1000.0" styleClass="backgroun_beko" stylesheets="@application.css">
+                           <children>
+                              <Pane fx:id="Detials_pane" style="-: ;" styleClass="backgroun_beko" stylesheets="@application.css">
+                                 <children>
+                                    <TextField fx:id="server_IP" layoutX="237.0" layoutY="120.0" prefHeight="39.0" prefWidth="267.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="server_Port" layoutX="239.0" layoutY="178.0" prefHeight="39.0" prefWidth="270.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="userName" layoutX="237.0" layoutY="235.0" prefHeight="39.0" prefWidth="275.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <Button fx:id="signin" alignment="CENTER" contentDisplay="CENTER" layoutX="279.0" layoutY="300.0" maxWidth="176.0" minHeight="45.0" minWidth="67.0" mnemonicParsing="false" onAction="#sign_function" prefHeight="45.0" prefWidth="142.0" styleClass="button1" text="Connect" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Black" size="22.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="94.0" layoutY="126.0" text="Host name">
+                                       <font>
+                                          <Font name="System Bold Italic" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="93.0" layoutY="184.0" text="Server port">
+                                       <font>
+                                          <Font name="System Bold Italic" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="94.0" layoutY="242.0" text="User name">
+                                       <font>
+                                          <Font name="System Bold Italic" size="17.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" />
+                                 </padding>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+                  <Pane fx:id="main_Pane" prefHeight="346.0" prefWidth="637.0" styleClass="backgroun_beko" stylesheets="@application.css" visible="false">
+                     <children>
+                        <StackPane fx:id="backgrond_parent" layoutX="275.0" layoutY="59.0" prefHeight="368.0" prefWidth="750.0">
+                           <children>
+                              <ImageView fx:id="Background_imag" fitHeight="368.0" fitWidth="793.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="file:/C:/Users/Elfarouk%20Omar/Desktop/bakr/server_FX3/src/resources/Background_main.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="Lab_status" alignment="CENTER" contentDisplay="CENTER" prefHeight="168.0" prefWidth="518.0" text="Label" textAlignment="RIGHT" textFill="#ff9829">
+                                 <StackPane.margin>
+                                    <Insets left="-300.0" top="-600.0" />
+                                 </StackPane.margin>
+                                 <font>
+                                    <Font name="Arial" size="39.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <Button fx:id="btn_frineds_wind" layoutX="321.0" layoutY="5.0" mnemonicParsing="false" onAction="#show_friend_window" prefHeight="40.0" prefWidth="212.0" styleClass="button1" text="Friends window">
+                           <font>
+                              <Font name="System Bold Italic" size="19.0" />
+                           </font>
+                        </Button>
+                        <TabPane fx:id="USER_tabPane" layoutX="14.0" layoutY="19.0" prefHeight="447.0" prefWidth="126.0" rotateGraphic="true" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab closable="false" text="MY friends">
+                                 <content>
+                                    <ListView fx:id="friends" onMouseClicked="#click_list" prefHeight="200.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
+                            <Tab closable="false" text="ONline">
+                                 <content>
+                                    <ListView fx:id="ONLINE_users" prefHeight="200.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                        <Button fx:id="btn_frineds_wind1" layoutX="574.0" layoutY="2.0" mnemonicParsing="false" onAction="#show_grouChat" prefHeight="45.0" prefWidth="204.0" styleClass="button1" text="make group chat">
+                           <font>
+                              <Font name="System Bold Italic" size="19.0" />
+                           </font></Button>
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+         </content></Tab>
+  </tabs>
+</TabPane>

@@ -1,0 +1,37 @@
+              
+              
+
+
+     // fill friends list
+		 
+		ObservableList<userdata> data = FXCollections.observableArrayList();
+		
+		data = new sqliteconnection().dataget();
+		for (userdata User : data) {
+             File fil =new File("resources/Offline.png");
+             Label label =new Label(User.getIp());
+             label .setTranslateY(25);
+             label.setWrapText(true);
+             label.setStyle("-fx-font: 20px 'Serif';-fx-text-fill: #f3530a;");
+             ImageView img=new ImageView(new Image(fil.toURI().toString()));
+             img.setFitHeight(25);
+             img.setFitWidth(20);
+             img .setTranslateY(25);
+             ImageView img_user;
+              if (User.getPath().equals("")) {
+                 fil =new File("resources/profile_placeholder.png");
+                 img_user =new ImageView(new Image(fil.toURI().toString()));
+              }
+             else
+                 img_user=new ImageView(new Image(User.getPath()));
+
+ 
+             System.out.println(User.getPath()+User.getIp());
+             img_user.setFitHeight(50);
+             img_user.setFitWidth(50);
+             HBox hbo=new HBox();
+             hbo.setSpacing(10);
+    hbo.getChildren().addAll(img_user,label,img);
+friends.getItems().add(hbo);
+		}
+		

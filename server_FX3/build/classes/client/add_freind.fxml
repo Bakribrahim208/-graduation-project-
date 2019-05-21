@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="497.0" styleClass="backgroun_beko" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.add_freindController">
+   <children>
+      <TextField fx:id="name" layoutX="162.0" layoutY="12.0" prefHeight="31.0" prefWidth="251.0" promptText="like jon">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="ip" layoutX="162.0" layoutY="58.0" prefHeight="31.0" prefWidth="251.0" promptText="like 192.168.10.10">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Button fx:id="btn_friend" layoutX="194.0" layoutY="146.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="154.0" styleClass="button1" text="Add friend">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button layoutX="413.0" layoutY="105.0" mnemonicParsing="false" onAction="#Select_image" prefHeight="25.0" prefWidth="76.0" styleClass="button1" text="Browse..." />
+      <ListView fx:id="friends_list" layoutX="17.0" layoutY="198.0" prefHeight="165.0" prefWidth="468.0" />
+      <HBox layoutX="10.0" layoutY="363.0" prefHeight="51.0" prefWidth="477.0" spacing="50.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#deleteUser" prefHeight="31.0" prefWidth="74.0" styleClass="button1" text="Delete" wrapText="true">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#selected" prefHeight="34.0" prefWidth="224.0" styleClass="button1" text="make contact with selected">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="closeButton" mnemonicParsing="false" onAction="#handleCloseButtonAction" prefHeight="31.0" prefWidth="87.0" styleClass="button1" text="close">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <TextField fx:id="Path" layoutX="162.0" layoutY="99.0" prefHeight="31.0" prefWidth="251.0" promptText="Path">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="18.0" prefHeight="27.0" prefWidth="94.0" text="UserName" textAlignment="RIGHT">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="64.0" prefHeight="27.0" prefWidth="94.0" text="IP Address" textAlignment="RIGHT">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="99.0" prefHeight="27.0" prefWidth="107.0" text="Select Image" textAlignment="RIGHT">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

@@ -1,0 +1,44 @@
+ String st="/";
+   st += tf_file.getText();
+   tf_file.setText(" ");
+     VideoTransmit vt = new VideoTransmit(new MediaLocator("vfw://0"),st,"20002");
+//     VideoTransmit vt1 = new VideoTransmit(new MediaLocator("javasound://8000"),st,"20002");
+
+   String result = vt.start();
+     clientManager.sendMessage("video"+" "+to +" "+from);  
+	if (result != null) {
+	    System.out.println("Error : " + result);
+	    System.exit(0);
+	}
+    
+    
+	System.out.println("Start transmission for 60 seconds...");
+	
+	 String str[] = new String[2];
+   str[0]  =  st + "/20006";
+   str[1]  =  st + "/20008";
+   AVReceive2 avReceive= new AVReceive2(str);   
+ 
+        if (!avReceive.initialize())    
+         {   
+             System.err.println("Failed to initialize the sessions.");   
+             System.exit(-1);   
+         }  
+         	
+         try    
+         {   
+             while (!avReceive.isDone())   
+                 Thread.sleep(60000);   
+         }    
+         catch (Exception ex)    
+         {}   
+
+      //«·„›—Ê÷ ‰⁄„· “—«— Â‰« ⁄‘«‰ ‰Êﬁ› «·›ÌœÌÊ
+      try {
+	    Thread.currentThread().sleep(600000);
+	} catch (InterruptedException ie) {
+	}
+      
+	// Stop the transmission
+	vt.stop();
+          

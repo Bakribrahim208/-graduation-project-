@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="159.0" prefWidth="320.0" styleClass="backgroun_beko" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.approval_meassageController">
+   <children>
+      <Button fx:id="btn_ok" layoutX="24.0" layoutY="91.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="119.0" styleClass="button1" stylesheets="@application.css" text="Connect ">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Button>
+      <Button fx:id="btn_no" layoutX="187.0" layoutY="92.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="119.0" styleClass="button1" text="Disconnect">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Button>
+      <Label layoutX="24.0" layoutY="14.0" text="Approve Connect?" textFill="#614747">
+         <font>
+            <Font size="33.0" />
+         </font></Label>
+   </children>
+</Pane>
